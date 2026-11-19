@@ -11,16 +11,12 @@ interface Track {
 // ==========================================
 const PLAYLIST: Track[] = [
   {
-    title: "Sunday Morning Espresso",
+    title: "Food, Glorious Food",
     src: "/music/song1.mp3",
   },
   {
-    title: "Warm Brown Sugar Cookies",
+    title: "Warm Winter Jazz",
     src: "/music/song2.mp3",
-  },
-  {
-    title: "Vanilla Latte Vibes",
-    src: "/music/song3.mp3",
   },
 ];
 
