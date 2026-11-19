@@ -1,4 +1,4 @@
-import { Coffee, Milk } from "lucide-react";
+import { Milk } from "lucide-react";
 
 type RowProps = { name: string; price: string; note: string; tag?: string };
 
@@ -21,10 +21,6 @@ export function MenuBoard() {
     <section id="menu" className="bg-paper">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 md:grid-cols-12 md:px-10 md:py-24">
         <div className="md:col-span-4">
-          <span className="kicker inline-flex items-center gap-2">
-            <Coffee className="size-4 text-amber" aria-hidden />
-            01 — The Menu Board
-          </span>
           <h2 className="mt-4 font-display text-5xl font-semibold leading-[0.95] md:text-6xl">
             Coffee
             <br />

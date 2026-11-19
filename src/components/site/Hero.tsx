@@ -10,10 +10,6 @@ export function Hero() {
             <span className="pill-cheetah">
               <span>Watsonville, CA</span>
             </span>
-            <span className="kicker inline-flex items-center gap-2 text-muted-foreground">
-              <Coffee className="size-4 text-amber" aria-hidden />
-              Issue No. 01 — The House Menu
-            </span>
           </div>
 
           <h1 className="mt-8 font-display text-[3.4rem] font-semibold leading-[0.92] tracking-[-0.02em] sm:text-7xl lg:text-[5.75rem]">

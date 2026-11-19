@@ -1,5 +1,3 @@
-import { Cookie } from "lucide-react";
-
 type BakeProps = { name: string; price: string; note: string };
 
 function BakeRow({ name, price, note }: BakeProps) {
@@ -17,10 +15,6 @@ export function Bakery() {
     <section id="bakery" className="border-y border-line bg-oat">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-12 md:px-10 md:py-24">
         <div className="relative md:col-span-5">
-          <span className="kicker inline-flex items-center gap-2">
-            <Cookie className="size-4 text-amber" aria-hidden />
-            04 — The Bakery
-          </span>
           <h2 className="mt-4 font-display text-6xl font-semibold leading-[0.9] md:text-8xl">
             The
             <br />

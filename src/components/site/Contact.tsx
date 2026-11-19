@@ -1,17 +1,5 @@
 import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
 
-type PopUpProps = { date: string; place: string; hours: string };
-
-function PopUpRow({ date, place, hours }: PopUpProps) {
-  return (
-    <li className="grid grid-cols-[5.5rem_1fr] gap-x-4 border-t border-line py-3.5 text-sm first:border-t-0 sm:grid-cols-[7rem_1fr_auto]">
-      <span className="kicker pt-0.5 text-gold-deep">{date}</span>
-      <span className="font-medium">{place}</span>
-      <span className="col-start-2 text-muted-foreground sm:col-start-auto">{hours}</span>
-    </li>
-  );
-}
-
 type PayProps = { name: string; handle: string };
 
 function PayBadge({ name, handle }: PayProps) {
@@ -44,14 +32,9 @@ export function Contact() {
                   your event.
                 </p>
 
-                <div className="mt-8">
-                  <p className="kicker mb-2 text-muted-foreground">Upcoming pop-ups</p>
-                  <ul className="rounded-lg border border-amber bg-nude px-5 shadow-card">
-                    <PopUpRow date="Sat · TBA" place="Location coming soon — Watsonville, CA" hours="8am – 1pm" />
-                    <PopUpRow date="Sun · TBA" place="Location coming soon — Watsonville, CA" hours="9am – 12pm" />
-                    <PopUpRow date="Weekdays" place="Pre-orders by text" hours="Pickup by arrangement" />
-                  </ul>
-                </div>
+                <p className="mt-8 text-center font-display text-xl font-semibold text-muted-foreground md:text-2xl">
+                  Pickup at 33 Peace Ct, Watsonville, California
+                </p>
               </div>
 
               {/* Direct contact */}
