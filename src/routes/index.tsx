@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 
 import { Bakery } from "@/components/site/Bakery";
+import { CafeMusicPlayer } from "@/components/site/CafeMusicPlayer";
 import { Contact } from "@/components/site/Contact";
 import { Flavors } from "@/components/site/Flavors";
 import { Gallery } from "@/components/site/Gallery";
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <CafeMusicPlayer />
       <SiteHeader />
       <main>
         <Hero />
