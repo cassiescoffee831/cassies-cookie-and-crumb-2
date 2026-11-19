@@ -1,0 +1,464 @@
+/*
+ * Tailwind v4 entry: config lives here, with no tailwind.config.js or PostCSS plugin.
+ * Keep every @import in this top block. Web fonts load via <link> in src/routes/__root.tsx.
+ */
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Cup & Crumb design system — print lookbook × Y2K café menu. */
+
+@theme inline {
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --shadow-card: var(--shadow-soft);
+  --shadow-lift: var(--shadow-raised);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-espresso: var(--espresso);
+  --color-espresso-soft: var(--espresso-soft);
+  --color-nude: var(--nude);
+  --color-oat: var(--oat);
+  --color-latte: var(--latte);
+  --color-caramel: var(--caramel);
+  --color-paper: var(--paper);
+  --color-amber: var(--amber);
+  --color-line: var(--line);
+  --color-mocha: var(--mocha);
+  --color-cream: var(--cream);
+  --color-gold-deep: var(--gold-deep);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.75rem; /* 12px cards */
+
+  /* Brand — upscale espresso & caramel */
+  --espresso: oklch(0.198 0.026 49.1); /* #1F120B deep espresso text */
+  --espresso-soft: oklch(0.228 0.035 45.9);
+  --nude: oklch(0.929 0.019 75.3); /* #EFE6DA toasted almond background */
+  --paper: oklch(0.946 0.017 76.1); /* alternate section tint */
+  --oat: oklch(0.886 0.028 72.8); /* #E5D7C6 soft oat cards */
+  --latte: oklch(0.836 0.038 72.5);
+  --mocha: oklch(0.282 0.040 46.2); /* #3A2318 roasted mocha cards */
+  --cream: oklch(0.956 0.015 70.9); /* #F7EFE6 text on dark */
+  --caramel: oklch(0.228 0.035 45.9); /* #2A170E dark roast (primary) */
+  --caramel-deep: oklch(0.198 0.026 49.1);
+  --amber: oklch(0.684 0.111 64.1); /* #C98A4B gold-caramel accent */
+  --gold-deep: oklch(0.551 0.097 62.2);
+  --line: color-mix(in oklab, var(--espresso) 14%, transparent);
+  --line-gold: var(--amber);
+
+  --background: var(--nude);
+  --foreground: var(--espresso);
+  --card: var(--mocha);
+  --card-foreground: var(--cream);
+  --popover: var(--oat);
+  --popover-foreground: var(--espresso);
+  --primary: var(--caramel);
+  --primary-foreground: oklch(0.967 0.013 71.3); /* #FAF3EB */
+  --secondary: var(--oat);
+  --secondary-foreground: var(--espresso);
+  --muted: var(--oat);
+  --muted-foreground: oklch(0.465 0.040 56.4);
+  --accent: var(--amber);
+  --accent-foreground: var(--espresso);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: var(--cream);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--amber);
+
+  --chart-1: var(--espresso);
+  --chart-2: var(--amber);
+  --chart-3: var(--latte);
+  --chart-4: var(--oat);
+  --chart-5: var(--mocha);
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--espresso);
+  --sidebar-primary: var(--caramel);
+  --sidebar-primary-foreground: var(--cream);
+  --sidebar-accent: var(--oat);
+  --sidebar-accent-foreground: var(--espresso);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--amber);
+
+  --cheetah: url("/cheetah.svg");
+  --gloss-espresso:
+    linear-gradient(180deg, color-mix(in oklab, var(--cream) 14%, transparent) 0%, transparent 50%),
+    linear-gradient(180deg, oklch(0.295 0.043 50.7), var(--caramel));
+  --shadow-pill:
+    inset 0 1px 0 color-mix(in oklab, var(--cream) 20%, transparent),
+    0 10px 22px -12px color-mix(in oklab, var(--espresso) 80%, transparent);
+  --shadow-soft:
+    0 1px 2px color-mix(in oklab, var(--espresso) 8%, transparent),
+    0 12px 30px -16px color-mix(in oklab, var(--espresso) 35%, transparent);
+  --shadow-raised:
+    0 2px 4px color-mix(in oklab, var(--espresso) 8%, transparent),
+    0 24px 44px -20px color-mix(in oklab, var(--espresso) 45%, transparent);
+}
+
+/*
+ * Fallback for older browsers that can't read oklch() or color-mix()
+ * (e.g. older Safari / iOS 15 and earlier). Without this they render plain black & white.
+ */
+@supports not (color: oklch(0 0 0)) {
+  :root,
+  .dark {
+    --espresso: #1F120B;
+    --espresso-soft: #2A170E;
+    --nude: #EFE6DA;
+    --paper: #F4ECE1;
+    --oat: #E5D7C6;
+    --latte: #D9C6AF;
+    --mocha: #3A2318;
+    --cream: #F7EFE6;
+    --caramel: #2A170E;
+    --caramel-deep: #1F120B;
+    --amber: #C98A4B;
+    --gold-deep: #9A6430;
+    --line: rgba(31, 18, 11, 0.14);
+    --line-gold: #C98A4B;
+    --background: #EFE6DA;
+    --foreground: #1F120B;
+    --card: #3A2318;
+    --card-foreground: #F7EFE6;
+    --primary: #2A170E;
+    --primary-foreground: #FAF3EB;
+    --secondary: #E5D7C6;
+    --muted: #E5D7C6;
+    --muted-foreground: #6B5444;
+    --accent: #C98A4B;
+    --border: rgba(31, 18, 11, 0.14);
+    --input: rgba(31, 18, 11, 0.14);
+    --ring: #C98A4B;
+    --destructive: #D33A2C;
+    --destructive-foreground: #F7EFE6;
+    --gloss-espresso:
+      linear-gradient(180deg, rgba(247, 239, 230, 0.14) 0%, rgba(247, 239, 230, 0) 50%),
+      linear-gradient(180deg, #3E2618, #2A170E);
+    --shadow-pill:
+      inset 0 1px 0 rgba(247, 239, 230, 0.2),
+      0 10px 22px -12px rgba(31, 18, 11, 0.8);
+    --shadow-soft:
+      0 1px 2px rgba(31, 18, 11, 0.08),
+      0 12px 30px -16px rgba(31, 18, 11, 0.35);
+    --shadow-raised:
+      0 2px 4px rgba(31, 18, 11, 0.08),
+      0 24px 44px -20px rgba(31, 18, 11, 0.45);
+  }
+}
+
+/* Dark scope uses the same espresso & caramel palette (no grayscale fallback) */
+.dark {
+  --background: var(--nude);
+  --foreground: var(--espresso);
+  --card: var(--mocha);
+  --card-foreground: var(--cream);
+  --popover: var(--oat);
+  --popover-foreground: var(--espresso);
+  --primary: var(--caramel);
+  --primary-foreground: oklch(0.967 0.013 71.3);
+  --secondary: var(--oat);
+  --secondary-foreground: var(--espresso);
+  --muted: var(--oat);
+  --accent: var(--amber);
+  --accent-foreground: var(--espresso);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
+  ::selection {
+    background: var(--amber);
+    color: var(--espresso);
+  }
+  /* Accent words inside headings: Playfair italic in deep gold */
+  .font-display em {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--gold-deep);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+}
+
+/* ——— Brand utilities ——— */
+
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Soft oat card, deep espresso text, thin gold border */
+@utility card-warm {
+  background: var(--oat);
+  color: var(--espresso);
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Roasted mocha card, cream text, thin gold border */
+@utility card-mocha {
+  background: var(--mocha);
+  color: var(--cream);
+  border: 1px solid var(--line-gold);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Gentle hover lift for clickable things and cards */
+@utility lift {
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-raised);
+    border-color: var(--amber);
+  }
+}
+
+@utility cheetah {
+  background-color: var(--caramel);
+  background-image: var(--cheetah);
+  background-size: 90px 90px;
+}
+
+/* Thin horizontal print trim framed by hairlines */
+@utility cheetah-trim {
+  height: 14px;
+  background-image: var(--cheetah);
+  background-size: 90px 90px;
+}
+
+/* Thin print frame around a card: wrap content in an inner element */
+@utility cheetah-frame {
+  padding: 7px;
+  background-image: var(--cheetah);
+  background-size: 90px 90px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Small pill badge with print fill and legible label */
+@utility pill-cheetah {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  background-image: var(--cheetah);
+  background-size: 54px 54px;
+  padding: 2px;
+  & > span {
+    border-radius: 9999px;
+    background: var(--cream);
+    color: var(--espresso);
+    padding: 0.25rem 0.75rem;
+    white-space: nowrap;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+/* Retro glossy espresso pill button */
+@utility btn-gloss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  border-radius: 9999px;
+  padding: 0.95rem 1.75rem;
+  background: var(--gloss-espresso);
+  color: var(--primary-foreground);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow-pill);
+  border: 1px solid var(--amber);
+  transition:
+    transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    box-shadow 300ms ease,
+    color 300ms ease;
+  &:hover {
+    transform: translateY(-2px);
+    color: var(--amber);
+    box-shadow:
+      var(--shadow-pill),
+      0 0 0 3px rgba(201, 138, 75, 0.3);
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+/* Outline pill companion */
+@utility btn-line {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.85rem 1.4rem;
+  border: 1px solid var(--amber);
+  background: var(--oat);
+  color: var(--espresso);
+  font-weight: 500;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 300ms cubic-bezier(0.2, 0.7, 0.2, 1),
+    background-color 300ms ease,
+    box-shadow 300ms ease;
+  &:hover {
+    transform: translateY(-2px);
+    background: var(--paper);
+    box-shadow: var(--shadow-raised);
+  }
+}
+
+/* Menu prices */
+@utility price {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Mono kicker labels */
+@utility kicker {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Dotted price leader on menu boards */
+@utility leader {
+  flex: 1 1 auto;
+  min-width: 1.5rem;
+  border-bottom: 2px dotted var(--amber);
+  transform: translateY(-0.35em);
+  opacity: 0.6;
+}
+
+/* Gallery placeholder tile */
+@utility photo-slot {
+  background:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0 11px,
+      color-mix(in oklab, var(--espresso) 7%, transparent) 11px 12px
+    ),
+    var(--latte);
+}
+
+/* Print L-shaped corner accents */
+@utility corner-tl {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 44px;
+  height: 44px;
+  background-image: var(--cheetah);
+  background-size: 60px 60px;
+  border-top-left-radius: var(--radius);
+  clip-path: polygon(0 0, 100% 0, 100% 8px, 8px 8px, 8px 100%, 0 100%);
+  pointer-events: none;
+}
+@utility corner-br {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 44px;
+  height: 44px;
+  background-image: var(--cheetah);
+  background-size: 60px 60px;
+  border-bottom-right-radius: var(--radius);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 calc(100% - 8px), calc(100% - 8px) calc(100% - 8px), calc(100% - 8px) 0);
+  pointer-events: none;
+}
+
+@utility marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .marquee {
+    animation: none;
+  }
+}
