@@ -17,9 +17,9 @@ export function Hero() {
           </div>
 
           <h1 className="mt-8 font-display text-[3.4rem] font-semibold leading-[0.92] tracking-[-0.02em] sm:text-7xl lg:text-[5.75rem]">
-            Good espresso.
+            Cassie's
             <br />
-            <em>Better</em> crumbs.
+            <em>Coffee</em>
           </h1>
 
           <div className="mt-8 grid gap-8 border-t border-line pt-6 sm:grid-cols-[1fr_auto] sm:items-end">
