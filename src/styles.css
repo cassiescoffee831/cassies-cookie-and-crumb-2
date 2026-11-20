@@ -426,6 +426,12 @@
   opacity: 0.6;
 }
 
+/* Keep illustrations sharp — no blur when scaled */
+@utility image-crisp {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
 /* Gallery placeholder tile */
 @utility photo-slot {
   background:

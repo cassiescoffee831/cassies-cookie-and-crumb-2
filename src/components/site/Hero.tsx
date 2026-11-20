@@ -41,9 +41,9 @@ export function Hero() {
         <div className="md:col-span-5">
           <div className="lift relative cheetah-frame rounded-lg">
             <img
-              src="/img/hero.jpg"
-              alt="Cup & Crumb — specialty coffee & cookies, Watsonville"
-              className="w-full h-full object-cover rounded-lg"
+              src="/img/cat-logo.png"
+              alt="Cup & Crumb logo"
+              className="w-full h-full object-cover rounded-lg image-crisp"
             />
           </div>
         </div>
