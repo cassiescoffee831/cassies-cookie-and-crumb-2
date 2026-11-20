@@ -39,12 +39,21 @@ export function Hero() {
 
         {/* Magazine cover column */}
         <div className="md:col-span-5">
-          <div className="lift relative cheetah-frame rounded-lg">
-            <img
-              src="/img/cat-logo.png"
-              alt="Cup & Crumb logo"
-              className="w-full h-full object-cover rounded-lg image-crisp"
-            />
+          <div className="lift relative cheetah-frame rounded-lg overflow-hidden">
+            <div className="relative w-full aspect-[4/5] min-h-[320px] md:min-h-[440px]">
+              {/* Base layer: coffee cup photo */}
+              <img
+                src="/img/hero.jpg"
+                alt="Coffee cup photo"
+                className="w-full h-full object-cover"
+              />
+              {/* Overlay layer: cat illustration */}
+              <img
+                src="/img/cat-logo.png"
+                alt="Cup & Crumb cat logo"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[75%] md:w-[55%] max-w-[460px] object-contain image-crisp z-10 pointer-events-none"
+              />
+            </div>
           </div>
         </div>
       </div>
