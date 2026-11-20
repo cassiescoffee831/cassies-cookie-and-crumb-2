@@ -1,4 +1,4 @@
-import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
+import { Mail, MessageSquare, Phone } from "lucide-react";
 
 type PayProps = { name: string; handle: string };
 
@@ -20,10 +20,6 @@ export function Contact() {
             <div className="grid gap-12 md:grid-cols-12">
               {/* Pop-ups */}
               <div className="md:col-span-7">
-                <span className="kicker inline-flex items-center gap-2">
-                  <MapPin className="size-4 text-amber" aria-hidden />
-                  06 — Find us · Order
-                </span>
                 <h2 className="mt-4 font-display text-5xl font-semibold leading-[0.95] md:text-6xl">
                   Find us <em>&amp; order ahead</em>
                 </h2>
@@ -62,8 +58,8 @@ export function Contact() {
               <div className="flex flex-col gap-5 md:flex-row md:items-center">
                 <span className="kicker shrink-0 md:w-40">We accept</span>
                 <div className="grid flex-1 gap-3 md:grid-cols-3">
-                  <img src="/img/venmo.jpg" alt="Venmo QR code" className="h-16 w-24 rounded-lg object-cover border border-amber" />
-                  <img src="/img/cashapp.jpg" alt="Cash App QR code" className="h-16 w-24 rounded-lg object-cover border border-amber" />
+                  <img src="/img/venmo.jpg" alt="Venmo QR code" className="h-40 w-40 rounded-lg object-contain border border-amber" />
+                  <img src="/img/cashapp.jpg" alt="Cash App QR code" className="h-40 w-40 rounded-lg object-contain border border-amber" />
                   <PayBadge name="Apple Pay" handle="(831) 840-7856" />
                 </div>
               </div>
@@ -71,7 +67,7 @@ export function Contact() {
 
             {/* Meetup location */}
             <p className="mt-8 text-center font-display text-base font-semibold text-muted-foreground">
-              Meetups & events are hosted at Cup & Crumb — Watsonville, CA. Ask Cassie at the shop.
+              Please message Cassie to place an order and meet up.
             </p>
           </div>
         </div>

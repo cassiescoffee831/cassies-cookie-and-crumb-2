@@ -22,9 +22,6 @@ export function Flavors() {
               The house <em>flavors</em>
             </h2>
           </div>
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground md:col-span-5 md:justify-self-end md:text-right">
-            Six signatures, made to pour into any Signature Latte ($6.75). Pick one — or ask Cassie for today’s favorite.
-          </p>
         </div>
 
         <div className="mt-12">

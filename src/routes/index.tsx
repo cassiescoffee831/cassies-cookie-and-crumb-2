@@ -41,6 +41,23 @@ function Index() {
         <Bakery />
         <Gallery />
         <Contact />
+
+        {/* Cheetah trim + ticker */}
+        <div className="cheetah-trim" aria-hidden />
+        <div className="overflow-hidden bg-espresso py-3 text-nude">
+          <div className="marquee flex w-max gap-10 whitespace-nowrap font-display text-lg font-semibold">
+            {Array.from({ length: 2 }).map((_, i) => (
+              <div key={i} className="flex gap-10" aria-hidden={i === 1}>
+                <span>Specialty espresso</span><span className="text-amber">✦</span>
+                <span>Brown butter cookies</span><span className="text-amber">✦</span>
+                <span>Cold foam</span><span className="text-amber">✦</span>
+                <span>Oat milk welcome</span><span className="text-amber">✦</span>
+                <span>Small batch</span><span className="text-amber">✦</span>
+                <span>Watsonville, CA</span><span className="text-amber">✦</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </main>
     </div>
   );

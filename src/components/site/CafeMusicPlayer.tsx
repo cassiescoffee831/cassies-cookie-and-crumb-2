@@ -184,23 +184,10 @@ export const CafeMusicPlayer: React.FC = () => {
           box-shadow: 0 1px 0 #4a2c18;
         }
 
-        .cafe-badge {
-          background-color: #e6ccb2;
-          padding: 5px 12px;
-          border-radius: 20px;
-          font-size: 12px;
-          font-weight: 700;
-          color: #5c3a21;
-          border: 1.5px dashed #9c6644;
-        }
-
         @media (max-width: 600px) {
           .cafe-player-bar {
             justify-content: center;
             text-align: center;
-          }
-          .cafe-badge {
-            display: none;
           }
         }
       `}</style>
@@ -259,9 +246,6 @@ export const CafeMusicPlayer: React.FC = () => {
             </svg>
           </button>
         </div>
-
-        {/* Cute Bakery Badge */}
-        <div className="cafe-badge">Freshly Baked Beats 🥐</div>
 
         {/* Hidden Audio Element */}
         <audio

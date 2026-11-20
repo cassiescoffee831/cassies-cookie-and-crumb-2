@@ -1,4 +1,4 @@
-import { Camera, Play } from "lucide-react";
+import { Play } from "lucide-react";
 import { useRef, useState } from "react";
 
 type VideoCardProps = { src: string; poster: string; caption: string };
@@ -58,9 +58,9 @@ function VideoCard({ src, poster, caption }: VideoCardProps) {
 export function Gallery() {
   const videos = [
     { src: "/videos/IMG_9266.mp4", poster: "/videos/poster-9266.jpg", caption: "Pulling the espresso shot" },
-    { src: "/videos/IMG_9267.mp4", poster: "/videos/poster-9267.jpg", caption: "Steaming the milk" },
+    { src: "/videos/IMG_9267.mp4", poster: "/videos/poster-9267.jpg", caption: "Pouring the shot" },
     { src: "/videos/IMG_9269.mp4", poster: "/videos/poster-9269.jpg", caption: "Pouring the latte" },
-    { src: "/videos/IMG_9270.mp4", poster: "/videos/poster-9270.jpg", caption: "Drizzling the sweetener" },
+    { src: "/videos/IMG_9270.mp4", poster: "/videos/poster-9270.jpg", caption: "Drizzling the caramel" },
     { src: "/videos/IMG_9271.mp4", poster: "/videos/poster-9271.jpg", caption: "Shaking the espresso over ice" },
     { src: "/videos/IMG_9272.mp4", poster: "/videos/poster-9272.jpg", caption: "Foaming the milk" },
     { src: "/videos/IMG_9273.mp4", poster: "/videos/poster-9273.jpg", caption: "Building the drink" },
@@ -72,10 +72,6 @@ export function Gallery() {
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-24">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div>
-            <span className="kicker inline-flex items-center gap-2">
-              <Camera className="size-4 text-amber" aria-hidden />
-              05 — Lookbook
-            </span>
             <h2 className="mt-4 font-display text-5xl font-semibold leading-[0.95] md:text-7xl">
               The <em>Feed</em>
             </h2>
