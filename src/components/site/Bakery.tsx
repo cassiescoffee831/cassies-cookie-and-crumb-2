@@ -43,17 +43,17 @@ export function Bakery() {
             <ul>
               <BakeRow
                 name="Brown Butter Chocolate Chip Cookie"
-                price="$4.00"
+                price="$3.00"
                 note="Nutty brown butter, pools of dark chocolate, flaky sea salt."
               />
               <BakeRow
                 name="Cinnamon Sugar Crumb Cookie"
-                price="$3.75"
+                price="$2.75"
                 note="Soft-baked, rolled in cinnamon sugar, finished with buttery crumb."
               />
               <BakeRow
                 name="Rotating Weekly Pastry"
-                price="$4.50"
+                price="$3.00"
                 note="Something new every week — ask what’s fresh out of the oven."
               />
             </ul>

@@ -25,12 +25,12 @@ export function Flavors() {
 
         <div className="mt-12">
           <div className="grid gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
-            <Flavor name="Hazelnut" />
-            <Flavor name="Mocha" />
-            <Flavor name="Caramel" />
-            <Flavor name="Biscoff Cookie Butter" />
-            <Flavor name="Banana Bread" />
-            <Flavor name="Cinnamon Toast Crunch" />
+            <Flavor name="Hazelnut Latte" />
+            <Flavor name="Mocha Latte" />
+            <Flavor name="Caramel Latte" />
+            <Flavor name="Biscoff Cookie Butter Latte" />
+            <Flavor name="Banana Bread Latte" />
+            <Flavor name="Cinnamon Toast Crunch Latte" />
           </div>
         </div>
       </div>

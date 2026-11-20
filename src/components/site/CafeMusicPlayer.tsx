@@ -11,6 +11,10 @@ interface Track {
 // ==========================================
 const PLAYLIST: Track[] = [
   {
+    title: "La Mentira",
+    src: "/music/song4.mp3",
+  },
+  {
     title: "Flower Moon",
     src: "/music/song1.mp3",
   },
@@ -21,10 +25,6 @@ const PLAYLIST: Track[] = [
   {
     title: "Samba De Orpheu",
     src: "/music/song3.mp3",
-  },
-  {
-    title: "La Mentira",
-    src: "/music/song4.mp3",
   },
 ];
 
@@ -128,7 +128,7 @@ export const CafeMusicPlayer: React.FC = () => {
         }
 
         .track-label {
-          font-size: 11px;
+          font-size: 16px;
           text-transform: uppercase;
           letter-spacing: 0.8px;
           color: #8b5a2b;
@@ -136,7 +136,7 @@ export const CafeMusicPlayer: React.FC = () => {
         }
 
         .track-title {
-          font-size: 15px;
+          font-size: 24px;
           font-weight: 700;
           color: #3e2212;
         }

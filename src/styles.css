@@ -20,6 +20,7 @@
   --font-display: "Vintella Skillton", "Playfair Display", Georgia, serif;
   --font-sans: "Vintella Skillton", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "Vintella Skillton", ui-monospace, monospace;
+  --spacing: 4px;
   --shadow-card: var(--shadow-soft);
   --shadow-lift: var(--shadow-raised);
 
@@ -217,9 +218,23 @@
   * {
     border-color: var(--color-border);
   }
+  .grid > * {
+    min-width: 0;
+  }
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    font-size: 24px;
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 28px;
+    }
+  }
+  @media (min-width: 1024px) {
+    html {
+      font-size: 30px;
+    }
   }
   body {
     background-color: var(--color-background);
@@ -387,9 +402,10 @@
 /* Menu prices */
 @utility price {
   font-family: var(--font-display);
-  font-weight: 600;
+  font-weight: 800;
   font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.08em;
+  text-shadow: 0.5px 0 0 currentcolor;
 }
 
 /* Mono kicker labels */

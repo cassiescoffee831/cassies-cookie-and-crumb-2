@@ -9,7 +9,7 @@ function MenuRow({ name, price, note, tag }: RowProps) {
         <h3 className="font-display text-2xl font-semibold md:text-3xl">{name}</h3>
         {tag ? <span className="kicker hidden text-muted-foreground sm:inline">{tag}</span> : null}
         <span className="leader" aria-hidden />
-        <span className="price text-xl text-primary md:text-2xl">{price}</span>
+        <span className="price text-2xl text-primary md:text-3xl">{price}</span>
       </div>
       <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground md:text-base">{note}</p>
     </li>
@@ -43,7 +43,7 @@ export function MenuBoard() {
               <MenuRow
                 name="Signature Latte"
                 tag="House flavors"
-                price="$6.75"
+                price="$6.00"
                 note="Crafted with any of our house specialty flavors."
               />
             </ul>
@@ -63,7 +63,7 @@ export function MenuBoard() {
               Oat Milk Substitution
             </p>
           </div>
-          <p className="price text-2xl text-primary">+ $1.25</p>
+          <p className="price text-2xl text-primary">+ $0.50</p>
         </div>
       </div>
     </section>

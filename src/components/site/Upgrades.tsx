@@ -43,7 +43,7 @@ export function Upgrades() {
           />
           <Upgrade
             name="Cinnamon Topping"
-            price="$0.50"
+            price="$0.25"
             note="Warm, aromatic freshly dusted cinnamon finish."
           />
         </ul>

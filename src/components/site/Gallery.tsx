@@ -28,9 +28,9 @@ function VideoCard({ src, poster, caption }: VideoCardProps) {
       <div className="relative">
         <video
           ref={videoRef}
-          src={src}
+          src={src + "#t=0.001"}
           poster={poster}
-          preload="none"
+          preload="metadata"
           style={{ transform: "translateZ(0)" }}
           onPlay={handlePlay}
           onPause={() => setIsPlaying(false)}
