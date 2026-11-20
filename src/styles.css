@@ -6,14 +6,20 @@
 @source "../src";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: "Vintella Skillton";
+  src: url("/fonts/Vintella-Skillton.otf") format("opentype");
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /* Cup & Crumb design system — print lookbook × Y2K café menu. */
 
 @theme inline {
-  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Vintella Skillton", "Playfair Display", Georgia, serif;
+  --font-sans: "Vintella Skillton", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Vintella Skillton", ui-monospace, monospace;
   --shadow-card: var(--shadow-soft);
   --shadow-lift: var(--shadow-raised);
 

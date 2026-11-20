@@ -27,19 +27,13 @@ export function MenuBoard() {
             <em>&amp; drinks</em>
           </h2>
           <p className="mt-6 max-w-xs text-sm leading-relaxed text-muted-foreground">
-            Every drink is pulled to order on specialty espresso. Ask for it hot or iced.
+            Every drink is pulled to order on specialty espresso.
           </p>
         </div>
 
         <div className="md:col-span-8">
           <div className="card-warm px-6 md:px-10">
             <ul>
-              <MenuRow
-                name="Classic Latte"
-                tag="Hot / Iced"
-                price="$5.75"
-                note="Velvety micro-foam over specialty espresso, hot or iced."
-              />
               <MenuRow
                 name="Shaken Espresso"
                 tag="Iced"

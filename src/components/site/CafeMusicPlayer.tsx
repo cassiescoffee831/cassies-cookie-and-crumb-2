@@ -11,12 +11,20 @@ interface Track {
 // ==========================================
 const PLAYLIST: Track[] = [
   {
-    title: "Food, Glorious Food",
+    title: "Flower Moon",
     src: "/music/song1.mp3",
   },
   {
-    title: "Warm Winter Jazz",
+    title: "Incontro al Caffe'",
     src: "/music/song2.mp3",
+  },
+  {
+    title: "Samba De Orpheu",
+    src: "/music/song3.mp3",
+  },
+  {
+    title: "La Mentira",
+    src: "/music/song4.mp3",
   },
 ];
 
@@ -85,7 +93,7 @@ export const CafeMusicPlayer: React.FC = () => {
           justify-content: space-between;
           flex-wrap: wrap;
           gap: 12px;
-          font-family: 'Quicksand', sans-serif;
+          font-family: "Vintella Skillton", sans-serif;
           color: #4a2c18;
         }
 

@@ -57,14 +57,14 @@ function VideoCard({ src, poster, caption }: VideoCardProps) {
 
 export function Gallery() {
   const videos = [
-    { src: "/videos/IMG_9266.mp4", poster: "/videos/poster-9266.jpg", caption: "Pulling the espresso shot" },
+    { src: "/videos/IMG_9266.mp4", poster: "/videos/poster-9266.jpg", caption: "Dropping the ice" },
     { src: "/videos/IMG_9267.mp4", poster: "/videos/poster-9267.jpg", caption: "Pouring the shot" },
-    { src: "/videos/IMG_9269.mp4", poster: "/videos/poster-9269.jpg", caption: "Pouring the latte" },
+    { src: "/videos/IMG_9269.mp4", poster: "/videos/poster-9269.jpg", caption: "Brown sugar added" },
     { src: "/videos/IMG_9270.mp4", poster: "/videos/poster-9270.jpg", caption: "Drizzling the caramel" },
     { src: "/videos/IMG_9271.mp4", poster: "/videos/poster-9271.jpg", caption: "Shaking the espresso over ice" },
-    { src: "/videos/IMG_9272.mp4", poster: "/videos/poster-9272.jpg", caption: "Foaming the milk" },
-    { src: "/videos/IMG_9273.mp4", poster: "/videos/poster-9273.jpg", caption: "Building the drink" },
-    { src: "/videos/IMG_9277.mp4", poster: "/videos/poster-9277.jpg", caption: "Finishing with the foam swirl" },
+    { src: "/videos/IMG_9272.mp4", poster: "/videos/poster-9272.jpg", caption: "Dropping the milk over the espresso" },
+    { src: "/videos/IMG_9273.mp4", poster: "/videos/poster-9273.jpg", caption: "Addition of cold foam" },
+    { src: "/videos/IMG_9277.mp4", poster: "/videos/poster-9277.jpg", caption: "Finish and serve to customer!" },
   ];
 
   return (
