@@ -14,7 +14,7 @@ function VideoCard({ src, caption }: VideoCardProps) {
         preload="auto"
         className="aspect-[9/16] w-full rounded-lg border border-line object-contain shadow-card"
       />
-      <figcaption className="text-sm leading-relaxed text-cream/75 md:text-base">{caption}</figcaption>
+      <figcaption className="text-sm leading-relaxed text-espresso md:text-base">{caption}</figcaption>
     </figure>
   );
 }
