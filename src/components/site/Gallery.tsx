@@ -1,19 +1,20 @@
 import { Camera } from "lucide-react";
 
-type SlotProps = { label: string; caption: string; aspect: string };
+type VideoCardProps = { src: string; caption: string };
 
-/* Photo placeholder: replace the inner block with an <img> when photos are ready. */
-function PhotoSlot({ label, caption, aspect }: SlotProps) {
+function VideoCard({ src, caption }: VideoCardProps) {
   return (
-    <figure className="mb-4 break-inside-avoid md:mb-6">
-      <div className={`lift relative overflow-hidden rounded-lg border border-amber shadow-card ${aspect}`}>
-        <div className="photo-slot flex size-full items-center justify-center p-4">
-          <span className="kicker rounded-full bg-nude/90 px-3 py-1.5 text-center shadow-card">{label}</span>
-        </div>
-        <span className="corner-tl rounded-tl-[1.25rem]" aria-hidden />
-        <span className="corner-br rounded-br-[1.25rem]" aria-hidden />
-      </div>
-      <figcaption className="mt-2 text-sm text-muted-foreground">{caption}</figcaption>
+    <figure className="flex flex-col gap-2">
+      <video
+        src={src}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="aspect-[9/16] w-full rounded-lg border border-line object-contain shadow-card"
+      />
+      <figcaption className="text-sm leading-relaxed text-cream/75 md:text-base">{caption}</figcaption>
     </figure>
   );
 }
@@ -37,13 +38,15 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 columns-2 gap-4 md:columns-3 md:gap-6">
-          <PhotoSlot label="Photo: Iced latte" caption="The iced latte" aspect="aspect-[3/4]" />
-          <PhotoSlot label="Photo: Cookies" caption="Brown butter, still warm" aspect="aspect-square" />
-          <PhotoSlot label="Photo: Cold foam pour" caption="Cold foam, poured slow" aspect="aspect-[4/5]" />
-          <PhotoSlot label="Photo: Shaken espresso" caption="Shaken over ice" aspect="aspect-[2/3]" />
-          <PhotoSlot label="Photo: Pastry" caption="This week’s pastry" aspect="aspect-[5/4]" />
-          <PhotoSlot label="Photo: Pop-up table" caption="See you at the pop-up" aspect="aspect-[3/4]" />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <VideoCard src="/videos/IMG_9266.mp4" caption="Pulling the espresso shot" />
+          <VideoCard src="/videos/IMG_9267.mp4" caption="Steaming the milk" />
+          <VideoCard src="/videos/IMG_9269.mp4" caption="Pouring the latte" />
+          <VideoCard src="/videos/IMG_9270.mp4" caption="Drizzling the sweetener" />
+          <VideoCard src="/videos/IMG_9271.mp4" caption="Shaking the espresso over ice" />
+          <VideoCard src="/videos/IMG_9272.mp4" caption="Foaming the milk" />
+          <VideoCard src="/videos/IMG_9273.mp4" caption="Building the drink" />
+          <VideoCard src="/videos/IMG_9277.mp4" caption="Finishing with the foam swirl" />
         </div>
       </div>
     </section>
