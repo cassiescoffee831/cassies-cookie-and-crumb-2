@@ -40,25 +40,11 @@ export function Hero() {
         {/* Magazine cover column */}
         <div className="md:col-span-5">
           <div className="lift relative cheetah-frame rounded-lg">
-            <div className="relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-lg border border-amber bg-card p-6 text-cream">
-              <img
-                src="/img/hero.jpg"
-                alt="Cup & Crumb — specialty coffee & cookies, Watsonville"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-                <span className="font-display text-[16rem] font-medium italic leading-none text-amber md:text-[18rem]">&amp;</span>
-              </div>
-              <div className="relative flex items-end justify-between gap-4">
-                <p className="font-display text-2xl font-semibold leading-tight">
-                  Coffee
-                  <br />
-                  &amp; cookies
-                  <br />
-                  by Cassie
-                </p>
-              </div>
-            </div>
+            <img
+              src="/img/hero.jpg"
+              alt="Cup & Crumb — specialty coffee & cookies, Watsonville"
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
         </div>
       </div>
