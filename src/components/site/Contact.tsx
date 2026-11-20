@@ -32,9 +32,6 @@ export function Contact() {
                   your event.
                 </p>
 
-                <p className="mt-8 text-center font-display text-xl font-semibold text-muted-foreground md:text-2xl">
-                  Pickup at 33 Peace Ct, Watsonville, California
-                </p>
               </div>
 
               {/* Direct contact */}
@@ -65,12 +62,17 @@ export function Contact() {
               <div className="flex flex-col gap-5 md:flex-row md:items-center">
                 <span className="kicker shrink-0 md:w-40">We accept</span>
                 <div className="grid flex-1 gap-3 md:grid-cols-3">
-                  <PayBadge name="Venmo" handle="@your-handle" />
-                  <PayBadge name="Cash App" handle="$yourcashtag" />
+                  <img src="/img/venmo.jpg" alt="Venmo QR code" className="h-16 w-24 rounded-lg object-cover border border-amber" />
+                  <img src="/img/cashapp.jpg" alt="Cash App QR code" className="h-16 w-24 rounded-lg object-cover border border-amber" />
                   <PayBadge name="Apple Pay" handle="(831) 840-7856" />
                 </div>
               </div>
             </div>
+
+            {/* Meetup location */}
+            <p className="mt-8 text-center font-display text-base font-semibold text-muted-foreground">
+              Meetups & events are hosted at Cup & Crumb — Watsonville, CA. Ask Cassie at the shop.
+            </p>
           </div>
         </div>
       </div>

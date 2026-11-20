@@ -41,9 +41,11 @@ export function Hero() {
         <div className="md:col-span-5">
           <div className="lift relative cheetah-frame rounded-lg">
             <div className="relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-lg border border-amber bg-card p-6 text-cream">
-              <div className="flex items-start justify-between">
-                <span className="kicker">Cup &amp; Crumb</span>
-              </div>
+              <img
+                src="/img/hero.jpg"
+                alt="Cup & Crumb — specialty coffee & cookies, Watsonville"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <span className="font-display text-[16rem] font-medium italic leading-none text-amber md:text-[18rem]">&amp;</span>
               </div>
@@ -55,11 +57,6 @@ export function Hero() {
                   <br />
                   by Cassie
                 </p>
-                <img
-                  src="/img/hero.jpg"
-                  alt="Cup & Crumb — specialty coffee & cookies, Watsonville"
-                  className="h-28 w-full rounded-lg border border-amber object-cover"
-                />
               </div>
             </div>
           </div>
