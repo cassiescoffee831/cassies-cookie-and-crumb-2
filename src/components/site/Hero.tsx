@@ -23,11 +23,6 @@ export function Hero() {
               Small-batch specialty espresso, pulled to order, with homemade cookies and pastries baked by
               Cassie — right here in Watsonville.
             </p>
-            <span className="kicker hidden text-right sm:block">
-              Hot · Iced
-              <br />
-              Baked daily
-            </span>
           </div>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -48,7 +43,6 @@ export function Hero() {
             <div className="relative flex aspect-[4/5] flex-col justify-between overflow-hidden rounded-lg border border-amber bg-card p-6 text-cream">
               <div className="flex items-start justify-between">
                 <span className="kicker">Cup &amp; Crumb</span>
-                <span className="kicker">Vol. Watsonville</span>
               </div>
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <span className="font-display text-[16rem] font-medium italic leading-none text-amber md:text-[18rem]">&amp;</span>
@@ -61,7 +55,11 @@ export function Hero() {
                   <br />
                   by Cassie
                 </p>
-                <span className="kicker rounded-full border border-amber px-3 py-1.5 text-amber">Hero photo here</span>
+                <img
+                  src="/img/hero.jpg"
+                  alt="Cup & Crumb — specialty coffee & cookies, Watsonville"
+                  className="h-28 w-full rounded-lg border border-amber object-cover"
+                />
               </div>
             </div>
           </div>
